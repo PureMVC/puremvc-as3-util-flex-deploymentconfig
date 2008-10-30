@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Deployment Configuration for MyApp
+
+  This example shows a configuration for three deployment environments, with different
+  NOTE: For security purposes, on production system, remove tags for all environments 
+             except for prod so as to keep from exposing the other environments, and to
+             reduce the size of the traffic.
+ -->
+<config:Config
+	xmlns:config 	= "config"
+	xmlns:dev		= "dev"
+	xmlns:stage  = "stage"
+	xmlns:prod    = "prod"
+	>	
+	
+	<!-- DEPLOYMENT ENVIRONMENT SELECTOR [ REQUIRED! ]-->
+	<config:deploy>dev</config:deploy>
+	
+	<!-- DEV ENVIRONMENT-->
+	<dev:appVersion>1.0</dev:appVersion>
+	<dev:appName>MyApp [ Development ]</dev:appName>
+	<dev:loginService>testdata/login.xml</dev:loginService>
+	<dev:userDataService>testdata/userdata.xml</dev:userDataService>
+	
+	<!-- STAGING ENVIRONMENT-->
+	<stage:appVersion>1.0</stage:appVersion>
+	<stage:appName>MyApp [ Staging ]</stage:appName>
+	<stage:loginService>http://stage.myapp.com/services/login.php</stage:loginService>
+	<stage:userDataService>http://stage.myapp.com/services/userdata.php</stage:userDataService>
+	
+	<!-- PRODUCTION ENVIRONMENT-->
+	<prod:appVersion>1.0</prod:appVersion>
+	<prod:appName>MyApp</prod:appName>
+	<prod:loginService>http://webservices.myapp.com/login.php</prod:loginService>
+	<prod:userDataService>http://webservices.com/userdata.php</prod:userDataService>
+	
+</config:Config>
