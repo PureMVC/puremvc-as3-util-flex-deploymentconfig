@@ -10,5 +10,6 @@ package org.puremvc.as3.utilities.flex.config.interfaces
 	public interface IConfigProxy extends IResponder
 	{
 		function constructVO( ):IConfigVO;
+		function retrieveConfig():void;
 	}
 }

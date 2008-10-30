@@ -99,7 +99,7 @@ package org.puremvc.as3.utilities.flex.config.model
         }
 
 		// The delegate for retrieving the configuration 
-        private var delegate:IConfigDelegate
+        protected var delegate:IConfigDelegate
 		
 	}
 }
