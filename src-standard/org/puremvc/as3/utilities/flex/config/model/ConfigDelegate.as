@@ -9,15 +9,20 @@ package org.puremvc.as3.utilities.flex.config.model
 	
 	import org.puremvc.as3.utilities.flex.config.interfaces.IConfigDelegate;
 	
+	/**
+	 * Configuration Delegate.
+	 * <P>
+	 * Handles communication with the server to retrieve 
+	 * the XML deployment configuration.</P>
+	 * <P>
+	 * Usually you don't need to subclass.</P>
+	 */
 	public class ConfigDelegate implements IConfigDelegate
 	{
 		import mx.rpc.http.HTTPService;
 		
 		/**
-		 * Configuration Delegate.
-		 * <P>
-		 * Handles communication with the server to retrive 
-		 * the deployment configuration file.</P>
+		 * Constructor.
 		 */
 	    public function ConfigDelegate( url:String )
 	    {
@@ -36,7 +41,8 @@ package org.puremvc.as3.utilities.flex.config.model
 	        service.send().addResponder( responder );
 	    }
 
-	    private var service 	: HTTPService = new HTTPService();
+		// The HTTPService object
+	    private var service:HTTPService = new HTTPService();
 	   
 	}
 }

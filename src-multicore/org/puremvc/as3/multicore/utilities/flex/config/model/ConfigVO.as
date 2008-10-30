@@ -5,16 +5,22 @@
  */
 package org.puremvc.as3.multicore.utilities.flex.config.model
 {
-	import org.puremvc.as3.utilities.flex.config.interfaces.IConfigVO;
-
+	import org.puremvc.as3.multicore.utilities.flex.config.interfaces.IConfigVO;
+	
+	/**
+	 * Configuration Value Object.
+	 * <P>
+	 * Abstract implementation. Subclass to add your own fields and validation.</P>
+	 */
 	public class ConfigVO implements IConfigVO
 	{
 		
 		/**
-		 * Set the configuration XML.
+		 * Set the XML Configuration.
 		 * <P>
-		 * Extracts the deployment namespace from the XML
-		 * and creates the AS3 Namespace.</P> 
+		 * Extracts the deployment namespace so that subsequent
+		 * calls to getters can use that namespace to retrieve 
+		 * values from this XML configuration.</P> 
 		 */
 		public function setConfig( config:XML ):void
 		{
@@ -43,13 +49,21 @@ package org.puremvc.as3.multicore.utilities.flex.config.model
 			return (nsDeploy != null);
 		}
 		
-		// The XML Configuration
+		/**
+		 *  The XML Configuration.
+		 */
 		protected var config:XML;
-		// The deployment namespace name		
+		/**
+		 *  The deployment <code>Namespace</code>.
+		 */		
 		protected var nsDeploy:Namespace;
-		// The deployment namespace
+		/**
+		 *  The name of the deployment <code>Namespace</code>.
+		 */
 		protected var nsDeployName:String;
-		// The configuration namespace
+		/**
+		 * The configuration <code>Namespace</code>.
+		 */
 		protected var nsConfig:Namespace = new Namespace('config', 'config');
 
 	}

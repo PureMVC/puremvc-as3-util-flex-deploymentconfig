@@ -7,8 +7,18 @@ package org.puremvc.as3.multicore.utilities.flex.config.interfaces
 {
 	import mx.rpc.IResponder;
 	
+	/**
+	 * Configuration Delegate Interface. 
+	 * <P>
+	 * Provided in case you wish to write your own delegate, though
+	 * it's not really necessary since the implementation class works fine
+	 * out of the box.</P>
+	 */
 	public interface IConfigDelegate
 	{
+		/**
+		 * Retrieve the XML configuration.
+		 */
 		function retrieveConfig( responder:IResponder ):void;
 	}
 }

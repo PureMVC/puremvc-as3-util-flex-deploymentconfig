@@ -7,8 +7,14 @@ package org.puremvc.as3.utilities.flex.config.interfaces
 {
 	import mx.rpc.IResponder;
 	
+	/**
+	 * Configuration Delegate Interface
+	 */
 	public interface IConfigDelegate
 	{
+		/**
+		 * Retrieve the XML configuration.
+		 */
 		function retrieveConfig( responder:IResponder ):void;
 	}
 }

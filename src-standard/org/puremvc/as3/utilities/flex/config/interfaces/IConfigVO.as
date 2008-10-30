@@ -5,9 +5,27 @@
  */
 package org.puremvc.as3.utilities.flex.config.interfaces
 {
+	/**
+	 * Configuration Value Object Interface.
+	 * <P>
+	 * Provides methods for setting the XML configuration
+	 * (which triggers parsing of the deployment namespace),
+	 * and validation of the configuration.</P> 
+	 */
 	public interface IConfigVO
 	{
+		/**
+		 * Set the XML Configuration.
+		 * <P>
+		 * Extracts the deployment namespace so that subsequent
+		 * calls to getters can use that namespace to retrieve 
+		 * values from this XML configuration.</P> 
+		 */
 		function setConfig( config:XML ):void;
+		
+		/**
+		 * Is the Configuration VO valid?
+		 */
 		function isValid():Boolean;
 	}
 }

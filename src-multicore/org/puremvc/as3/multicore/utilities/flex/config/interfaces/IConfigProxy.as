@@ -7,9 +7,30 @@ package org.puremvc.as3.multicore.utilities.flex.config.interfaces
 {
 	import mx.rpc.IResponder;
 	
+	/**
+	 * Configuration Proxy Interface.
+	 * <P>
+	 * Usually you subclass the <code>ConfigProxy</code> abstract 
+	 * implementation class and override one or both of <code>constructVO</code> 
+	 * or <code>constructDelegate</code> to use your own VO 
+	 * (and optionally your own delegate, though it's rarely needed).
+	 * </P>
+	 */
 	public interface IConfigProxy extends IResponder
 	{
+		/**
+		 * Construct the IConfigVO.
+		 */
 		function constructVO( ):IConfigVO;
+		
+		/**
+		 * Construct the IConfigDelegate.
+		 */
+		function constructDelegate( ):IConfigDelegate;
+		
+		/**
+		 * Retrieve the XML Configuration.
+		 */
 		function retrieveConfig():void;
 	}
 }
